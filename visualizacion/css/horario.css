@@ -1,0 +1,103 @@
+text {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+#main {width: 500px; margin-left: auto; margin-right: auto; font: 9px Helvetica;border:1px solid green;}
+#chart path {-webkit-transition-property: fill; -webkit-transition-duration: 0.2s;}
+#horarios_svg text {font-family: helvetica, sans-serif; fill: #555;}
+#status {cursor: pointer; text-anchor: middle;}
+#status g.first text.time {font-size: 10px;fill: #55f;font-weight: bold;}
+#status g.first text.value {font-size: 10px; font-weight: bold;}
+#status g.first text.units {font-size: 10px;}
+#status g.second text.time, #status g.third text.time {font-size: 10px;}
+#status g.second text.value, #status g.third text.value {font-size: 10px; fill: #555;}
+#status g.second text.units, #status g.third text.units {font-size: 10px;}
+#horarios_svg text.day.label {font-size: 10px; font-weight: bold; fill: #55f; pointer-events: none;}
+#horarios_svg text.time.label {font-size: 10px; font-weight: bold; fill: #55f; pointer-events: none;}
+.week_step {font-size: 20px; fill: #555; font-weight: bold; font-family: helvetica, sans-serif; cursor: pointer;fill:blue;}
+#horarios_svg {position:absolute;right:5px;top:40px;border:5px solid #cbdadf;padding:0px;z-index:3;background-color:white;}
+.info{color:blue;border:1px dashed;font-family:'Signika';font-size:14px;padding:10px;}/* rotulos con linea intermitente azul */
+.info2{background-color:#22a;color:white;padding:5px;font-size:11px;border: 2px solid;border-radius: 5px;}/* info en barchart meses*/
+/*  INFO */
+#info_horarios{position:absolute;left:5px;top:40px;border:1px solid #cbdadf;padding:5px;width:52%;height:55%;z-index:2;background-color:white;}
+.pos_info_vagones{position:absolute;left:5px;bottom:25px;}
+.pos_info_vagones2{position:absolute;left:30px;bottom:28px;}
+.info_vagones{font-size:11px;font-weight: bold;background-color: #494242;color:white; width:185px;height:auto;border:1px solid #cbdadf;border: 2px solid;border-radius: 5px; padding:5px; }
+#texto{font-family: Verdana;font-size:14px;fill: grey;text-anchor: middle;font-weight: bold;}
+/* HORARIOS MESES */
+#horarios_meses{position:absolute;left:5px;bottom:2px;border:1px solid #cbdadf;padding:3px;width:99%;heigth:110px;z-index:1;background-color:white;}
+  .bar {fill: steelblue;}
+  .bar:hover {fill: #44c;stroke: black;}
+  .axis text {font: 10px sans-serif;}
+  .axis path,
+  .axis line {fill: none;stroke: #000;shape-rendering: crispEdges;}
+  .x.axis path {display: none;}
+  .name{color:red;font-size:13px;}
+
+/* % POR DIA ENTRE SEMANA Y FINDE */
+	#pieChart {position:absolute;top:10px;left:10px;width:150px;height:150px;}
+	#lineChart {  position:absolute;top:10px;left:180px;height: 150px;}
+	#barChart {position:absolute;top:120px;left:160px;height: 150px;}
+	.slice { font-size: 12pt;font-family: Verdana;fill: white;font-weight: bold;} 
+
+	/*for line chart*/
+	.axis path, .axis line {fill: none;stroke: black;shape-rendering: crispEdges; }
+	.line {fill: none;stroke: steelblue;stroke-width: 3px;}
+	.dot {stroke-width: 2.5px;}
+	.axis text {font-family: Verdana;font-size: 11px;}
+	.title {font-family: Verdana; font-size: 15px;}
+	.xAxis {font-family: verdana;font-size: 11px;fill: black;}  
+	.yAxis { font-family: verdana; font-size: 11px;fill: white;}
+	/*table {border-collapse:collapse;font-family: Verdana;	color: #5C5558;font-size: 12px;text-align: right;}*/
+	td {padding-left: 10px;}
+	.lineChart{border:1px solid red;}
+	#lineChartTitle1 {font-family: Verdana;font-size  : 14px;fill:#4d4d4d;font-weight: bold;text-anchor: middle;}
+	.ChartTitle{font-family: Verdana;font-size: 12px;fill: #4d4d4d;font-weight: bold;text-anchor: middle;}
+	.ChartTitleBIG{font-family: Verdana;font-size: 28px;fill: #4d4d4d;font-weight: bold;text-anchor: middle;}
+	.title_center{font-family: Verdana;font-size: 12px;fill:#444;text-anchor: middle;font-weight: bold;}
+	
+
+	
+
+/* ANIMACIÓN */
+
+#unir-logo{
+	position:fixed;
+	right:15%;
+	top:20x;
+	border: 2px solid black;
+}
+
+#trenes{
+	padding: 100px 0;
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+.clouds {
+		width: 350;
+		position: absolute;
+		bottom: 25;
+		-webkit-animation: Clouds-h 40s linear infinite, Clouds-v 1s ease-in-out infinite;
+	}
+
+
+/* Clouds CSS3 animations */
+@-webkit-keyframes Clouds-h {
+    from {
+        right:-15%;
+    }
+    to { 
+        right: 90%;
+    }
+}
+
+@-webkit-keyframes Clouds-v {
+    from {
+        bottom: 0em;
+    }
+    0% {
+        bottom: 0em;
+    }
+    to {
+        bottom: 0em;
+    }
+}

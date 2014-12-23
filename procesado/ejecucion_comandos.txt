@@ -1,0 +1,15 @@
+scp reg_viajeros.dat root@192.168.1.172:/home/hdfs/
+ssh root@192.168.1.172
+chmod 777 reg_viajeros.dat
+chown hdfs:hdfs reg_viajeros.dat
+hadoop fs -copyFromLocal $1 /tfm/
+
+ 
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.2.0.2.0.10.0-1.jar -input /tfm/reg_viajeros.dat -output /tfm/procesado1 -file map.py -file reduce.py -mapper map.py -reducer reduce.py
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming-2.2.0.2.0.10.0-1.jar -input /tfm/procesado1/part-00000 -output /tfm/procesado2 -file estaciones_CargaPython.json -file recorridos.json -file map2.py -file reduce2.py -mapper map2.py -reducer reduce2.py
+
+
+hadoop fs -getmerge /tfm/procesado2/part-00000 ./procesado2.json
+scp root@192.168.1.172:/home/hdfs/procesado/procesado2.json ./procesado2.json
+
