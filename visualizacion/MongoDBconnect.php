@@ -4,7 +4,7 @@
 	$dburl = $_ENV['OPENSHIFT_MONGODB_DB_URL'];
 	$m = new MongoClient($dburl);
 	$db = $m->selectDB('tfm');
-	$db->authenticate("admin", "RQaVdHqY7A9J");
+	$db->authenticate("admin", " My password ");
 	/*$info = $db->selectCollection("info");
 	$msgs = $info->find();
 	foreach ($msgs as $msg) {
